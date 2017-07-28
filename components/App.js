@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import createPalette from 'material-ui/styles/palette';
 import deepPurple from 'material-ui/colors/deepPurple';
@@ -14,7 +15,13 @@ const theme = createMuiTheme({
 
 const App = (props) => (
     <MuiThemeProvider theme={theme}>
-        {props.children}
+        <div>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+            </Head>
+            {props.children}
+        </div>
     </MuiThemeProvider>
 );
 

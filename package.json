@@ -12,7 +12,8 @@
     "material-ui-icons": "^1.0.0-alpha.19",
     "next": "latest",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-inlinesvg": "^0.6.2"
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.1.0"
