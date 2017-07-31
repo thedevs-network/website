@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 
 const styleSheet = createStyleSheet('Buttons', theme => ({
@@ -9,22 +8,22 @@ const styleSheet = createStyleSheet('Buttons', theme => ({
         width: 12,
         height: 12,
         marginRight: 8
+    },
+    button: {
+        marginRight: '.5em',
+        marginLeft: '.5em'
     }
 }));
 
 const Buttons = ({ classes }) => (
-    <Grid container justify="center" gutter={24}>
-        <Grid item>
-            <Button color="accent" raised>
-                <img src="/static/telegram.svg" alt="Telegram" className={classes.svg} /> Join Channel
-            </Button>
-        </Grid>
-        <Grid item>
-            <Button color="contrast" href="#groups">
-                <img src="/static/telegram.svg" alt="Telegram" className={classes.svg} /> Join Groups
-            </Button>
-        </Grid>
-    </Grid>
+    <div className="row center-xs col-xs-12">
+        <Button color="accent" raised href="https://t.me/thedevs" target="_blank" className={classes.button}>
+            <img src="/static/telegram.svg" alt="Telegram" className={classes.svg} /> Join Channel
+        </Button>
+        <Button color="contrast" href="#community" className={classes.button}>
+            <img src="/static/telegram.svg" alt="Telegram" className={classes.svg} /> Join Groups
+        </Button>        
+    </div>
 )
 
 Buttons.propTypes = {

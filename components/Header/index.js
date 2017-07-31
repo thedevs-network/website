@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import Grid from 'material-ui/Grid';
 
 import Logo from './Logo';
 import Titles from './Titles';
@@ -14,25 +13,16 @@ const styleSheet = createStyleSheet('Header', theme => ({
         paddingBottom: theme.spacing.unit * 16,
         backgroundColor: theme.palette.primary[700],
         color: '#f5f5f5'
-    },
-    container: {
-        width: 1120,
-        flexBasis: 1120
     }
 }));
 
-const Header = (props) => {
-    const { classes } = props;
-    return (
-        <Grid container justify="center" className={classes.root}>
-            <Grid container justify="center" gutter={40} className={classes.container}>
-                <Logo />
-                <Titles />
-                <Buttons />
-            </Grid>
-        </Grid>
-    )
-}
+const Header = ({ classes }) => (
+    <div className={`${classes.root} row center-xs`} >
+        <Logo />
+        <Titles />
+        <Buttons />
+    </div>
+)
 
 Header.propTypes = {
     classes: PropTypes.object.isRequired
