@@ -25,8 +25,9 @@ export default class MyDocument extends Document {
 							'minimum-scale=1, width=device-width, height=device-height'}
 					/>
 					<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' />
-					<link rel="stylesheet" href="/static/normalize.css" />
-					<link rel="stylesheet" href="/static/flexboxgrid.min.css" />
+					<link rel="stylesheet" href="/static/css/normalize.css" />
+					<link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
+					<link rel="stylesheet" href="/static/css/main.css" />
 				</Head>
 				<body>
 					<Main />

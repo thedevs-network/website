@@ -9,8 +9,8 @@ import Buttons from './Buttons';
 const styleSheet = createStyleSheet('Header', theme => ({
     root: {
         flexGrow: 1,
-        paddingTop: theme.spacing.unit * 16,
-        paddingBottom: theme.spacing.unit * 16,
+        paddingTop: theme.spacing.unit * 11,
+        paddingBottom: theme.spacing.unit * 11,
         backgroundColor: theme.palette.primary[700],
         color: '#f5f5f5'
     }

@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
 const styleSheet = createStyleSheet('Buttons', theme => ({
+    root: {
+        marginTop: '4em'
+    },
     svg: {
         width: 12,
         height: 12,
@@ -16,12 +20,12 @@ const styleSheet = createStyleSheet('Buttons', theme => ({
 }));
 
 const Buttons = ({ classes }) => (
-    <div className="row center-xs col-xs-12">
-        <Button color="accent" raised href="https://t.me/thedevs" target="_blank" className={classes.button}>
-            <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join The Channel
+    <div className={classes.root + " row center-xs col-xs-12"}>
+        <Button color="contrast" href="https://t.me/thedevs" target="_blank" className={classes.button}>
+            <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Telegram
         </Button>
-        <Button color="contrast" href="#community" className={classes.button}>
-            <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join The Groups
+        <Button color="contrast" href="https://github.com/TheDevs-Network" target="_blank" className={classes.button}>
+            <img src="/static/img/github.svg" alt="GitHub" className={classes.svg} /> GitHub
         </Button>        
     </div>
 )
