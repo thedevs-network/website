@@ -1,20 +1,40 @@
 {
-  "name": "thedevs-website",
-  "version": "0.1.0",
+  "name": "thedevs.network",
+  "version": "1.0.0",
   "description": "Website for TheDevs Network",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheDevs-Network/website.git"
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "css-loader": "^0.28.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "material-ui": "^1.0.0-beta.2",
+    "material-ui-icons": "^1.0.0-alpha.19",
+    "next": "latest",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-jss": "^7.0.2",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1"
   },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.1.0"
+  }
   "keywords": [
     "TheDevs",
     "website"
   ],
   "author": "Thomas Rory Gummerson <thomas@gummerson.no> (https://trgwii.no)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDevs-Network/website.git"
+  },
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/TheDevs-Network/website/issues"
