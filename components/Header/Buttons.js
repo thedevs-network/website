@@ -4,30 +4,30 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
 const styleSheet = createStyleSheet('Buttons', theme => ({
-    svg: {
-        width: 12,
-        height: 12,
-        marginRight: 8
-    },
-    button: {
-        marginRight: '.5em',
-        marginLeft: '.5em'
-    }
+  svg: {
+    width: 12,
+    height: 12,
+    marginRight: 8
+  },
+  button: {
+    marginRight: '.5em',
+    marginLeft: '.5em'
+  }
 }));
 
 const Buttons = ({ classes }) => (
-    <div className="row center-xs col-xs-12">
-        <Button color="accent" raised href="https://t.me/thedevs" target="_blank" className={classes.button}>
-            <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join The Channel
-        </Button>
-        <Button color="contrast" href="#community" className={classes.button}>
-            <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join The Groups
-        </Button>        
-    </div>
+  <div className="row center-xs col-xs-12">
+    <Button color="accent" raised href="https://t.me/thedevs" target="_blank" className={classes.button}>
+      <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join The Channel
+    </Button>
+    <Button color="contrast" href="#community" className={classes.button}>
+      <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join The Groups
+    </Button>
+  </div>
 )
 
 Buttons.propTypes = {
-    classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired
 }
 
 export default withStyles(styleSheet)(Buttons);
