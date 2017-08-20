@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 
 import Description from './Description';
 import Buttons from './Buttons';
 
-const styleSheet = createStyleSheet('Footer', theme => ({
+const styles = theme => ({
   root: {
     backgroundColor: theme.palette.common.darkBlack,
     color: '#f5f5f5'
@@ -17,7 +17,7 @@ const styleSheet = createStyleSheet('Footer', theme => ({
     paddingTop: theme.spacing.unit * 13,
     paddingBottom: theme.spacing.unit * 13
   }
-}));
+});
 
 const Footer = ({ classes }) => (
   <div className={classes.root + " row col-xs-12 center-xs"}>
@@ -32,4 +32,4 @@ Footer.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styleSheet)(Footer);
+export default withStyles(styles)(Footer);

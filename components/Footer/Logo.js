@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 import Avatar from 'material-ui/Avatar';
 
-const styleSheet = createStyleSheet('Logo', theme => ({
+const styles = theme => ({
     logo: {
         width: 72,
         height: 72,
         marginBottom: "1em",
         boxShadow: theme.shadows[8]
     }
-}));
+});
 
 const Logo = ({classes}) => (
     <div className="row center-xs col-xs-12">
@@ -22,4 +22,4 @@ Logo.propTypes = {
     classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styleSheet)(Logo);
+export default withStyles(styles)(Logo);

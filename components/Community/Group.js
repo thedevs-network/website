@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
-const styleSheet = createStyleSheet('Group', theme => ({
+const styles = theme => ({
   root: {
     marginBottom: theme.spacing.unit * 4
   },
@@ -16,7 +16,7 @@ const styleSheet = createStyleSheet('Group', theme => ({
     overflow: 'hidden',
     transition: 'all .2s ease',
     '&:hover': {
-      boxShadow: theme.shadows[16],
+      boxShadow: theme.shadows[8],
       transform: 'translateY(-1%)'
     }
   },
@@ -35,13 +35,13 @@ const styleSheet = createStyleSheet('Group', theme => ({
     height: 10,
     marginRight: 8
   }
-}));
+});
 
 const Group = (props) => {
   const { classes, displayName, name, count, link } = props;
   return (
     <div className={classes.root + " col-lg-4 col-md-6 col-sm-6 col-xs-12"}>
-      <Paper className={classes.paper + " row col-xs-12 middle-xs between-xs"} elevation={4}>
+      <Paper className={classes.paper + " row col-xs-12 middle-xs between-xs"} elevation={2}>
         <div className="row col-xs middle-xs" style={{ padding: 0 }}>
           <Avatar src={`/static/img/${name}.jpg`} className={classes.photo} />
           <div style={{ float: 'left' }}>
@@ -58,11 +58,11 @@ const Group = (props) => {
         </Button>
       </Paper>
     </div>
-  )
-}
+  );
+};
 
 Group.PropTypes = {
   classes: PropTypes.object.isRequired
-}
+};
 
-export default withStyles(styleSheet)(Group);
+export default withStyles(styles)(Group);

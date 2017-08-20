@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 
-const styleSheet = createStyleSheet('Titles', theme => ({
+const styles = () => ({
   title: {
     textAlign: "center",
     color: 'inherit',
@@ -17,7 +17,7 @@ const styleSheet = createStyleSheet('Titles', theme => ({
     fontWeight: 300,
     opacity: .7
   }
-}));
+});
 
 const Titles = ({ classes }) => (
   <div className="row center-xs col-xs-12">
@@ -38,4 +38,4 @@ Titles.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styleSheet)(Titles);
+export default withStyles(styles)(Titles);

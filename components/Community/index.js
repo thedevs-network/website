@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 
 import Group from './Group';
 
 
-const styleSheet = createStyleSheet('Community', theme => ({
+const styles = theme => ({
   container: {
     width: 1120,
     flexBasis: 1120,
-    marginTop: 0,
+    marginTop: 8,
     paddingTop: theme.spacing.unit * 13,
     paddingBottom: theme.spacing.unit * 13,
-    backgroundColor: theme.palette.common.lightWhite
+    backgroundColor: theme.palette.shades.light.background.default
   },
   title: {
     marginBottom: theme.spacing.unit * 7
   }
-}));
+});
 
 const showGroups = (group, index) => (
   <Group
@@ -49,4 +49,4 @@ Community.PropTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styleSheet)(Community);
+export default withStyles(styles)(Community);

@@ -39,6 +39,9 @@ app.prepare()
 		server.get('/', (req, res) => {
 			return app.render(req, res, '/', state.groups);
 		});
+		server.get('/blog/', (req, res) => {
+			return app.render(req, res, '/blog', state.posts);
+		});
 		server.get('*', (req, res) => {
 			return handle(req, res);
 		});

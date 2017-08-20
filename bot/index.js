@@ -7,13 +7,14 @@ const requestCount = (token, id) => {
 
 module.exports = (token) => {
   return new Promise((resolve, reject) => {
+    if (!token) return resolve(groups);
     const groupWithCounts = groups.map(async group => {
       const { displayName, name, id, link } = group;
       const count = await requestCount(token, group.id);
       return {
         displayName,
-        id,
         name,
+        id,
         link,
         count: count.data.result
       }

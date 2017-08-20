@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
-const styleSheet = createStyleSheet('Buttons', theme => ({
+const styles = () => ({
   root: {
     marginTop: '4em'
   },
@@ -17,7 +17,7 @@ const styleSheet = createStyleSheet('Buttons', theme => ({
     marginRight: '.5em',
     marginLeft: '.5em'
   }
-}));
+});
 
 const Buttons = ({ classes }) => (
   <div className={classes.root + " row center-xs col-xs-12"}>
@@ -34,4 +34,4 @@ Buttons.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styleSheet)(Buttons);
+export default withStyles(styles)(Buttons);
