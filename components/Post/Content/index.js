@@ -36,6 +36,7 @@ const showTags = (tag, index) => (
 const Content = ({ classes, post }) => (
   <div>
     <Head>
+      <title>{post.attributes.title}</title>
       <meta name="twitter:title" content="The Devs" />
       <meta name="twitter:description" content={post.attributes.title} />
       <meta name="twitter:image" content={`https://thedevs.network/static/img/posts/${post.attributes.img}.jpg`} />
