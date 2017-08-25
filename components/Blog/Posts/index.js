@@ -20,8 +20,8 @@ const styles = theme => ({
   }
 });
 
-const showPosts = (post) => (
-  <Post content={post} />
+const showPosts = (post, index) => (
+  <Post key={index} post={post} />
 );
 
 const Posts = ({ classes, posts }) => (
@@ -35,7 +35,5 @@ const Posts = ({ classes, posts }) => (
 Posts.PropTypes = {
   classes: PropTypes.object.isRequired
 };
-
-
 
 export default withStyles(styles)(Posts);

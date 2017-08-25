@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
-
 import Group from './Group';
-
+import Button from 'material-ui/Button';
 
 const styles = theme => ({
   container: {
@@ -40,6 +39,11 @@ const Community = ({ classes, groups }) => (
       </div>
       <div className="row start-xs col-xs-12">
         {groups.map(showGroups)}
+      </div>
+      <div className="row center-xs" style={{marginTop: "4em"}}>
+        <Button href="/blog/" color="accent" raised>
+          Read our Blog
+        </Button>
       </div>
     </div>
   </div>

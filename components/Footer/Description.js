@@ -12,6 +12,6 @@ const Description = () => (
       </Typography>
     </div>
   </div>
-)
+);
 
 export default Description;

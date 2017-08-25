@@ -9,7 +9,6 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "ajv": "^5.2.2",
     "axios": "^0.16.2",
     "babel-plugin-module-resolver": "^2.7.1",
     "dotenv": "^4.0.0",
@@ -17,21 +16,23 @@
     "front-matter": "^2.1.2",
     "material-ui": "^1.0.0-beta.5",
     "material-ui-icons": "^1.0.0-alpha.19",
+    "moment": "^2.18.1",
     "next": "^3.0.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-jss": "^7.0.2",
+    "react-markdown": "^2.5.0",
     "speakingurl": "^14.0.0",
     "webpack": "^3.4.1"
   },
   "devDependencies": {
+    "ajv": "^5.2.2",
     "eslint-plugin-react": "^7.1.0"
   },
   "keywords": [
     "TheDevs",
     "website"
   ],
-  "author": "Thomas Rory Gummerson <thomas@gummerson.no> (https://trgwii.no)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheDevs-Network/website.git"

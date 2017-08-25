@@ -11,26 +11,24 @@ const styles = theme => ({
   }
 });
 
-const Menu = ({ classes }) => (
+const showTags = (tag, index) => (
+  <Button href={'/blog?tag=' + tag} key={index} color="contrast">
+    {tag}
+  </Button>
+);
+
+const Menu = ({ classes, tags }) => (
   <div className={classes.container}>
     <div className="row col-xs-12">
       <div className="row col-xs-6 start-xs">
-        <Button color="contrast">
-          Home
+        <Button href="/blog/" color="contrast">
+          All
         </Button>
-        <Button color="contrast">
-          JavaScript
-        </Button>
-        <Button color="contrast">
-          Python
-        </Button>
-        <Button color="contrast">
-          Design
-        </Button>
+        {tags.map(showTags)}
       </div>
       <div className="row col-xs-6 end-xs">
-        <Button color="contrast">
-          The Devs Telegram
+        <Button href="/" color="accent" raised>
+          Community
         </Button>
       </div>
     </div>

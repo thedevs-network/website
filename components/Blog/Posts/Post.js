@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import getSlug from 'speakingurl';
@@ -10,50 +11,58 @@ const styles = theme => ({
     padding: 0,
     marginBottom: theme.spacing.unit * 4,
     cursor: 'pointer',
-    transition: '.4s all ease',
+    transition: '.3s all ease',
     '&:hover': {
       transform: 'translateY(-1%)',
-      boxShadow: theme.shadows[12]
+      boxShadow: theme.shadows[6]
     }
   },
   media: {
-    height: 200
+    height: 297
   },
   chip: {
     margin: theme.spacing.unit
   },
   actions: {
     paddingRight: theme.spacing.unit * 2,
-    paddingLeft: theme.spacing.unit * 2
+    paddingLeft: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2
   }
 });
 
-const Post = ({ classes, content }) => (
-  <div className="col-xs-4">
-    <Card className={classes.card}>
-      <CardMedia
-        image={`/static/img/posts/${getSlug(content.attributes.title)}.PNG`}
-        title={content.attributes.title}
-        className={classes.media}
-      />
-      <CardContent>
-        <Typography type="headline" component="h2">
-          {content.attributes.title}
-        </Typography>
-        <Typography component="p">
-          {content.attributes.description}
-        </Typography>
-      </CardContent>
-      <CardActions className={classes.actions + " row between-xs"}>
-        <Typography type="caption">
-          {content.attributes.date}
-        </Typography>
-        <Typography type="caption" style={{ textAlign: "right" }}>
-          {content.attributes.author}
-        </Typography>
-      </CardActions>
-    </Card>
+const Post = ({ classes, post }) => (
+  <div className="col-xs-6">
+    <a href={"/blog/" + getSlug(post.attributes.title)} title={post.attributes.title}>
+      <Card className={classes.card}>
+        <CardMedia
+          image={`/static/img/posts/${post.attributes.img}.jpg`}
+          title={post.attributes.title}
+          className={classes.media}
+        />
+        <CardContent>
+          <Typography type="headline" component="h2">
+            {post.attributes.title}
+          </Typography>
+        </CardContent>
+        <CardActions className={classes.actions + " row between-xs middle-xs"}>
+          <div>
+            <Typography type="caption">
+              {post.attributes.date},
+              {` by ${post.attributes.author}`}
+            </Typography>
+          </div>
+          <Button color="accent" >
+            Read More
+          </Button>
+        </CardActions>
+      </Card>
+    </a>
   </div>
 );
+
+Post.PropTypes = {
+  classes: PropTypes.object.isRequired
+};
+
 
 export default withStyles(styles)(Post);
