@@ -10,6 +10,7 @@ class Index extends Component {
 		return (
 			<div>
 				<Head>
+					<title>The Devs, Developers Community on Telegram.</title>
 					<meta name="twitter:title" content="The Devs" />
 					<meta name="twitter:description" content="Developers Community on Telegram." />
 					<meta name="twitter:image" content="/static/img/thedevs.png" />

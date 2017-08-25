@@ -6,6 +6,7 @@ import Blog from '../components/Blog';
 const index = ({ posts }) => (
   <div>
     <Head>
+      <title>The Devs Blog, Developers Community on Telegram.</title>
       <meta name="twitter:title" content="The Devs Blog" />
       <meta name="twitter:description" content="Developers Community on Telegram." />
       <meta name="twitter:image" content="/static/img/thedevs.png" />
