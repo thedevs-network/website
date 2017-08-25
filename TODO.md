@@ -1,7 +1,11 @@
 ## TODOs
 
-- [ ] Blog page
-- [ ] Blog post page
+- [x] Blog page
+- [x] Blog post page
+  - [x] General style
+- [x] Footer
+- [ ] Social meta tags for posts
+- [ ] Telegram preview
 - [ ] Loading bar
 - [ ] Subscription
 - [ ] Feedback/contact form
