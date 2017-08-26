@@ -71,7 +71,7 @@ const Content = ({ classes, post }) => (
             alt={post.attributes.title}
             className={classes.image}
           />
-          <Typography color="default" type="display2" component="h1">
+          <Typography color="default" type="display2" component="h1" className="post-title">
             {post.attributes.title}
           </Typography>
           <ReactMarkdown source={post.body} className={classes.body + " row start-xs post-body"} />

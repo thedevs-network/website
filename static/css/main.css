@@ -109,3 +109,14 @@ a {
         padding-left: .5em;
     }
 }
+
+@media only screen and (max-width: 1120px) {
+    .post-title {
+        text-align: left;
+        font-size: 2.4em !important;
+    }
+      
+    .post-body h2 {
+        font-size: 2em;
+    }
+}
