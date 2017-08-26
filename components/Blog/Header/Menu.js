@@ -20,13 +20,13 @@ const showTags = (tag, index) => (
 const Menu = ({ classes, tags }) => (
   <div className={classes.container}>
     <div className="row col-xs-12">
-      <div className="row col-xs-6 start-xs">
+      <div className="row col-xs-12 col-md-6 start-md center-xs">
         <Button href="/blog/" color="contrast">
           All
         </Button>
         {tags.map(showTags)}
       </div>
-      <div className="row col-xs-6 end-xs">
+      <div className="row col-xs-12 col-md-6 end-md center-xs">
         <Button href="/" color="accent" raised>
           Community
         </Button>

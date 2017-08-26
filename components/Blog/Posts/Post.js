@@ -18,7 +18,8 @@ const styles = theme => ({
     }
   },
   media: {
-    height: 297
+    height: 297,
+    backgroundPosition: 'center center'
   },
   chip: {
     margin: theme.spacing.unit
@@ -31,7 +32,7 @@ const styles = theme => ({
 });
 
 const Post = ({ classes, post }) => (
-  <div className="col-xs-6">
+  <div className="col-xs-12 col-md-6">
     <a href={"/blog/" + getSlug(post.attributes.title)} title={post.attributes.title}>
       <Card className={classes.card}>
         <CardMedia

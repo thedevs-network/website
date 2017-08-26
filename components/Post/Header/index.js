@@ -17,6 +17,15 @@ const styles = theme => ({
     flexBasis: 1120,
     height: 88,
     alignItems: 'center'
+  },
+  '@media screen and (max-width: 1120px)': {
+    root: {
+      height: theme.spacing.unit * 38      
+    },
+    container: {
+      width: '100%',
+      flexBasis: '100%'
+    }
   }
 });
 

@@ -5,7 +5,7 @@ import Button from 'material-ui/Button';
 import Home from 'material-ui-icons/Home';
 
 const Menu = () => (
-  <div className="row col-xs-6 end-xs">
+  <div className="row col-xs-12 col-md-6 end-md center-xs">
     <Button href="/blog/" color="contrast" dense style={{ margin: "0 1em"}}>
       Blog
     </Button>

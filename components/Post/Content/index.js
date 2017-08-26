@@ -26,6 +26,24 @@ const styles = theme => ({
   body: {
     width: 672,
     marginTop: theme.spacing.unit * 12
+  },
+  '@media screen and (max-width: 1120px)': {
+    root: {
+      marginTop: -theme.spacing.unit * 20
+    },
+    container: {
+      width: '100%',
+      flexBasis: '100%'
+    },
+    image: {
+      width: '92vw',
+      height: '51.75vw'
+    },
+    body: {
+      width: '100%',
+      padding: '0 .2em',
+      marginTop: theme.spacing.unit * 8
+    }
   }
 });
 

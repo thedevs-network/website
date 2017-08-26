@@ -14,11 +14,21 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit * 2,
     color: '#f5f5f5',
     fontWeight: 500
+  }, 
+  '@media screen and (max-width: 1120px)': {
+    logo: {
+      width: 40,
+      height: 40
+    },
+    title: {
+      marginLeft: theme.spacing.unit,
+      padding: '1em 0'
+    }
   }
 });
 
 const Logo = ({ classes }) => (
-  <div className="row start-xs middle-xs col-xs-6">
+  <div className="row center-xs start-md middle-xs col-xs-12 col-md-6">
     <Avatar src='/static/img/thedevs.png' alt="the devs logo" className={classes.logo} />
     <Typography type="headline" className={classes.title}>
       The Devs
