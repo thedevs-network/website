@@ -4,7 +4,9 @@
 - [x] Blog post page
   - [x] General style
 - [x] Footer
-- [ ] Social meta tags for posts
+- [x] Social meta tags for posts
+- [ ] Custom analytics with events
+- [ ] Commenting system
 - [ ] Telegram preview
 - [ ] Loading bar
 - [ ] Subscription
