@@ -25,7 +25,7 @@ const styles = theme => ({
   },
   body: {
     width: 672,
-    marginTop: theme.spacing.unit * 12
+    marginTop: theme.spacing.unit * 10
   },
   '@media screen and (max-width: 1120px)': {
     root: {
