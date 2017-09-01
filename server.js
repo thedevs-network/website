@@ -31,9 +31,13 @@ fs.readdir('./posts', 'utf8', (err, files) => {
 			let post = fm(data);
 			let date = post.attributes.date.split(', ');
 			date[1] = date[1] - 1;
-			date = moment(date).format('MMM D');
+			date = moment(date)
 			post.attributes.date = date;
+			post.attributes.displayDate = date.format('MMM D')
 			state.posts.push(post);
+			if (state.posts.length === files.length) {
+				state.posts.sort((a, b) => b.attributes.date - a.attributes.date);
+			}
 		});
 	});
 });
@@ -49,9 +53,7 @@ app.prepare()
 		});
 
 		server.get('/blog/', (req, res) => {
-			console.log(req.query)
-			let { posts } = state;
-			return app.render(req, res, '/blog', posts);
+			return app.render(req, res, '/blog', state.posts);
 		});
 
 		server.get('/blog/:post', (req, res) => {

@@ -17,11 +17,11 @@ const styles = theme => ({
   }
 });
 
-const Header = ({ classes, tags }) => (
+const Header = ({ classes, cats }) => (
   <div className={`${classes.root} row center-xs`} >
     <Logo />
     <Titles />
-    <Menu tags={tags} />
+    <Menu cats={cats} />
   </div>
 );
 

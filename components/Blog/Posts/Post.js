@@ -48,7 +48,7 @@ const Post = ({ classes, post }) => (
         <CardActions className={classes.actions + " row between-xs middle-xs"}>
           <div>
             <Typography type="caption">
-              {post.attributes.date},
+              {post.attributes.displayDate},
               {` by ${post.attributes.author}`}
             </Typography>
           </div>

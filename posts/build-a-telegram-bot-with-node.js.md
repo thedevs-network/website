@@ -3,7 +3,7 @@ title: Build a simple Telegram Bot with Node.js
 img: simple-telegram-bot-nodejs
 date: 2017, 08, 25
 author: Pouria Ezzati
-cat: javascript
+cats: javascript
 tags: javascript, telegram, bot, node
 ---
 
@@ -44,11 +44,12 @@ Initialize the project and install **Telegraf**:
 ```javascript
 npm init
 ```
-```
+```javascript
 npm install telegraf --save  
 ```
 
 Now let's add it to our script and make a simple bot:
+<button>yeah</button>
 
 ```javascript
 const Telegraf = require('telegraf');
@@ -163,7 +164,7 @@ We need to extract the specific methods for buttons from Telegraf in order to wo
 const { Markup } = require('telegraf');
 ```
 
-First, let's add the current post number to the state. Every time a user asks for a subreddit we need to set index to 0 and update the subreddit in the state. In our **text** method:
+First, let's add the current post number to the state. Every time a user asks for a subreddit we need to set index to 0. In our **text** method:
 
 ```javascript
   if (!state[userId])

@@ -48,7 +48,7 @@ const styles = theme => ({
 });
 
 const showTags = (tag, index) => (
-  <Chip key={index} label={tag} style={{margin: '1em .5em'}}/>
+  <Chip key={index} label={tag} style={{ margin: '1em .5em' }} />
 );
 
 const Content = ({ classes, post }) => (
@@ -64,17 +64,22 @@ const Content = ({ classes, post }) => (
       <meta property="og:description" content={post.attributes.title} />
     </Head>
     <div className={classes.root + " row center-xs"}>
-      <div className={classes.container + " row center-xs"}> 
+      <div className={classes.container + " row center-xs"}>
         <article className="row col-xs-12 center-xs">
-          <img 
-            src={`/static/img/posts/${post.attributes.img}.jpg`} 
+          <img
+            src={`/static/img/posts/${post.attributes.img}.jpg`}
             alt={post.attributes.title}
             className={classes.image}
           />
           <Typography color="default" type="display2" component="h1" className="post-title">
             {post.attributes.title}
           </Typography>
-          <ReactMarkdown source={post.body} className={classes.body + " row start-xs post-body"} />
+          <div className={classes.body + " row start-xs post-body"}>
+            <ReactMarkdown source={post.body} />
+            <a href="/" style={{ fontStyle: "italic", fontSize: "2em", textAlign: "center", margin: "2em auto 1em" }}>
+              Join Developers Community on Telegram!
+            </a>
+          </div>
         </article>
       </div>
     </div>

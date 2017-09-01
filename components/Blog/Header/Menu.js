@@ -11,20 +11,20 @@ const styles = theme => ({
   }
 });
 
-const showTags = (tag, index) => (
-  <Button href={'/blog?tag=' + tag} key={index} color="contrast">
-    {tag}
+const showCats = (cat, index) => (
+  <Button href={'/blog?cat=' + cat} key={index} color="contrast">
+    {cat}
   </Button>
 );
 
-const Menu = ({ classes, tags }) => (
+const Menu = ({ classes, cats }) => (
   <div className={classes.container}>
     <div className="row col-xs-12">
       <div className="row col-xs-12 col-md-6 start-md center-xs">
         <Button href="/blog/" color="contrast">
           All
         </Button>
-        {tags.map(showTags)}
+        {cats.map(showCats)}
       </div>
       <div className="row col-xs-12 col-md-6 end-md center-xs">
         <Button href="/" color="accent" raised>
