@@ -55,13 +55,17 @@ const Content = ({ classes, post }) => (
   <div>
     <Head>
       <title>{post.attributes.title}</title>
-      <meta name="twitter:title" content="The Devs" />
-      <meta name="twitter:description" content={post.attributes.title} />
+      <meta name="twitter:title" content={post.attributes.title} />
+      <meta name="twitter:description" content="The Devs" />
       <meta name="twitter:image" content={`https://thedevs.network/static/img/posts/${post.attributes.img}.jpg`} />
-      <meta property="og:title" content="The Devs" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@thedevsnetwork" />
+      <meta name="twitter:creator" content="@poeti8" />
+
+      <meta property="og:title" content={post.attributes.title} />
       <meta property="og:url" content={`https://thedevs.network/blog/${getSlug(post.attributes.title)}`} />
       <meta property="og:image" content={`https://thedevs.network/static/img/posts/${post.attributes.img}.jpg`} />
-      <meta property="og:description" content={post.attributes.title} />
+      <meta property="og:description" content="The Devs" />
     </Head>
     <div className={classes.root + " row center-xs"}>
       <div className={classes.container + " row center-xs"}>

@@ -104,7 +104,7 @@ Use the whole Microsoft Office styles, components and icons with React. **Mainta
 
 AtlasKit is Atlassian's official UI library, built according to the Atlassian **design guidelines**.
 
-- **tlaskit-starter** creates a React app with AtlasKit components
+- **atlaskit-starter** creates a React app with AtlasKit components
 - Lots of well crafted components
 - Has it's own **design guidelines**
 
