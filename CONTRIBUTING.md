@@ -1,44 +1,47 @@
-- [How to write a post?](#posts)
+# Contributing Guidelines
+
+- [How to write for The Devs blog?](#posts)
 
 ## Posts
 
-The Devs blog is an [open source](https://github.com/TheDevs-Network/website/tree/master/posts) blog and **everyone** can publish their aricles in the blog, but first it should match our guidelines.
+[The Devs blog](https://thedevs.network/blog) is an [open source](https://github.com/TheDevs-Network/website/tree/master/posts) blog where **anyone** can publish their aricles, provided it follows certain guidelines.
 
 ### Choosing a subject
 
-Before starting to write anything, make sure the subject you're choosing is interesting enough and has the ability to let us write **high quality** content for it. 
+- Make sure the subject you're choosing is interesting and has the potential for **high quality** content.
 
-And since the blog is pretty fresh, try to choose **trendy** subjects for trendy languages, which will bring more visitors and help them discover our community.
+- Since our blog is pretty fresh, try to choose **trendy** topics on trendy languages, which will attract visitors, in turn helping them discover our community.
 
-With that said, if your're unsure about the subject, you can open an issue and ask for feedbacks.
+- That said, if you're unsure about your subject, you can open an issue and ask for feedback.
 
 ### Format
 
-Our blog posts are in markdown format. So you should write in markdown as well. 
+Our blog posts are written in Markdown. Use the same format in your blog file.
 
 ### Post info
 
-If you look to any of our [blog posts](https://github.com/TheDevs-Network/website/edit/master/posts/build-a-telegram-bot-with-node.js.md), you notice that the **first section** is dedicated to the **post information**, this section will be **emitted** from the final article. It includes these fields:
+If you look at any of our [blog posts](https://github.com/TheDevs-Network/website/edit/master/posts/build-a-telegram-bot-with-node.js.md), you will notice that the first section, called **front matter**, contains the **post information**. This section will be **omitted** from the final article. It includes these fields:
 
 - **title:** Post title in the blog.
-- **img:** A name for the article's image. (More info in image section)
+- **img:** Alt name for the article's featured image. (More info in image section)
 - **date:** Publishing date for your article, in _Y, M, D_ format.
-- **author:** Name of the article's author.
+- **author:** Name of the article's author __(you)__.
 - **cats:** Categories, seprated by comma.
-- **tags:** Tags, seprated by comma. 
+- **tags:** Tags, seprated by comma.
 
 ### Images
 
-For the main image of the article:
+For the featured image of the article:
 - Image size must be **800x450**
 - Image format must be **jpg** and it should be optimized.
-- Put the image in **/static/img/posts**.
-- Rename it to whatever you entered above in the post's info.
+- Add the image to **/static/img/posts**.
+- Rename it to match what you entered in the front matter above.
 
-For images that you use inside the article create a folder in the **/static/img/posts** and put all of them there and reference to that properly.
+For images you use inside the article, create a folder in the **/static/img/posts**, add all the images there and reference to that properly.
 
-**DO NOT ever use a copyrighted image, or an image that requires any attributions.** You can use [Unsplash](https://unsplash.com/) if you need stock photos.
+**DO NOT use a copyrighted image, or an image that requires attribution.** You can use [Unsplash](https://unsplash.com/) if you need to use stock photos.
 
-### Ready to pull request
+### Ready to create pull request
 
-Upload the post in [posts](https://github.com/TheDevs-Network/website/tree/master/posts) folder. Note that if your post needed extra editing and some fixes others have the right to edit the content.
+Add the post in [posts](https://github.com/TheDevs-Network/website/tree/master/posts) folder. Make sure all images are properly referenced.
+> Note: If your post needs refining, others have the right to edit the content it is published.
