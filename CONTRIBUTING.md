@@ -16,7 +16,7 @@
 
 ### Format
 
-Our blog posts are written in Markdown. Use the same format in your blog file.
+Our blog posts are written in Markdown. Make a copy of [`post-format.md`](post-format.md) in the [`/posts/`](/posts) folder and start writing!
 
 ### Post info
 
@@ -25,7 +25,7 @@ If you look at any of our [blog posts](https://github.com/TheDevs-Network/websit
 - **title:** Post title in the blog.
 - **img:** Alt name for the article's featured image. (More info in image section)
 - **date:** Publishing date for your article, in _Y, M, D_ format.
-- **author:** Name of the article's author __(you)__.
+- **author:** Name of the article's author _(you)_.
 - **cats:** Categories, seprated by comma.
 - **tags:** Tags, seprated by comma.
 
