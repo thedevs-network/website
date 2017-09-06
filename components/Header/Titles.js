@@ -23,7 +23,9 @@ const Titles = ({ classes }) => (
   <div className="row center-xs col-xs-12">
     <div className="col-xs-12">
       <Typography type="display2" className={classes.title}>
-        The Devs
+        <a href="/">
+          The Devs
+          </a>
       </Typography>
     </div>
     <div className="col-xs-12">

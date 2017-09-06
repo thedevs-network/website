@@ -14,7 +14,9 @@ const styles = theme => ({
 
 const Logo = ({ classes }) => (
   <div className="row center-xs col-xs-12">
-    <Avatar src='/static/img/thedevs.png' alt="the devs logo" className={classes.logo} />
+    <a href="/">
+      <Avatar src='/static/img/thedevs.png' alt="the devs logo" className={classes.logo} />
+    </a>
   </div>
 );
 
