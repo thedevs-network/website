@@ -24,6 +24,9 @@ const Buttons = ({ classes }) => (
     <Button color="contrast" href="https://t.me/thedevs" target="_blank" className={classes.button}>
       <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Telegram
     </Button>
+    <Button color="contrast" href="https://twitter.com/TheDevsNetwork" target="_blank" className={classes.button}>
+      <img src="/static/img/twitter.svg" alt="Twitter" className={classes.svg} /> Twitter
+    </Button>
     <Button color="contrast" href="https://github.com/TheDevs-Network" target="_blank" className={classes.button}>
       <img src="/static/img/github.svg" alt="GitHub" className={classes.svg} /> GitHub
     </Button>
