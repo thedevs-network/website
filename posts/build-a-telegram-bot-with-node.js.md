@@ -49,7 +49,6 @@ npm install telegraf --save
 ```
 
 Now let's add it to our script and make a simple bot:
-<button>yeah</button>
 
 ```javascript
 const Telegraf = require('telegraf');
