@@ -12,7 +12,7 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     marginTop: -theme.spacing.unit * 40,
-    paddingBottom: "6em"
+    paddingBottom: "2.5em"
   },
   container: {
     width: 1120,
