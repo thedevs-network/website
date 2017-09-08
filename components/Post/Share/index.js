@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
+import ReactSVG from 'react-svg';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import DeleteIcon from 'material-ui-icons/Delete';
@@ -26,6 +27,14 @@ const styles = theme => ({
     width: 'auto !important',
     margin: '0 1em 0 0 !important',
   },
+  button: {
+    transition: 'all .3s ease',
+    '&:hover': {
+      '& svg': {
+        fill: '#7B1FA2',
+      },
+    },
+  },
   svg: {
     width: 16,
     height: 16,
@@ -42,23 +51,47 @@ const Share = ({ classes, title }) => {
         <Typography type="body1" className={classes.text}>
           Share socially:
         </Typography>
-        <IconButton href={`https://t.me/share/url?url=https://thedevs.network/blog/${title}`} target="_blank">
-          <img src="/static/img/share/telegram.svg" alt="Telegram" className={classes.svg} />
+        <IconButton
+          href={`https://t.me/share/url?url=https://thedevs.network/blog/${title}`} 
+          target="_blank" 
+          className={classes.button}
+        >
+          <ReactSVG path="/static/img/share/telegram.svg" className={classes.svg} />
         </IconButton>
-        <IconButton href={`https://twitter.com/home?status=https://thedevs.network/blog/${title}`} target="_blank">
-          <img src="/static/img/share/twitter.svg" alt="Twitter" className={classes.svg} />
+        <IconButton 
+          href={`https://twitter.com/home?status=https://thedevs.network/blog/${title}`} 
+          target="_blank" 
+          className={classes.button}
+        >
+          <ReactSVG path="/static/img/share/twitter.svg" className={classes.svg} />
         </IconButton>
-        <IconButton href={`https://www.facebook.com/sharer/sharer.php?u=https://thedevs.network/blog/${title}`} target="_blank">
-          <img src="/static/img/share/facebook.svg" alt="Facebook" className={classes.svg} />
+        <IconButton 
+          href={`https://www.facebook.com/sharer/sharer.php?u=https://thedevs.network/blog/${title}`} 
+          target="_blank" 
+          className={classes.button}
+        >
+          <ReactSVG path="/static/img/share/facebook.svg" className={classes.svg} />
         </IconButton>
-        <IconButton href={`https://plus.google.com/share?url=https://thedevs.network/blog/${title}`} target="_blank">
-          <img src="/static/img/share/googleplus.svg" alt="Google+" className={classes.svg} />
+        <IconButton 
+          href={`https://plus.google.com/share?url=https://thedevs.network/blog/${title}`} 
+          target="_blank" 
+          className={classes.button}
+        >
+          <ReactSVG path="/static/img/share/googleplus.svg" className={classes.svg} />
         </IconButton>
-        <IconButton href={`http://vk.com/share.php?url=https://thedevs.network/blog/${title}`} target="_blank">
-          <img src="/static/img/share/vk.svg" alt="VK" className={classes.svg} />
+        <IconButton 
+          href={`http://vk.com/share.php?url=https://thedevs.network/blog/${title}`} 
+          target="_blank" 
+          className={classes.button}
+        >
+          <ReactSVG path="/static/img/share/vk.svg" className={classes.svg} />
         </IconButton>
-        <IconButton href={`https://www.linkedin.com/shareArticle?mini=true&url=https://thedevs.network/blog/${title}`} target="_blank">
-          <img src="/static/img/share/linkedin.svg" alt="Linkedin" className={classes.svg} />
+        <IconButton 
+          href={`https://www.linkedin.com/shareArticle?mini=true&url=https://thedevs.network/blog/${title}`} 
+          target="_blank" 
+          className={classes.button}
+        >
+          <ReactSVG path="/static/img/share/linkedin.svg" className={classes.svg} />
         </IconButton>
       </div>
     </div>
