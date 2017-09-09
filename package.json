@@ -27,6 +27,7 @@
     "react-dom": "^15.4.2",
     "react-jss": "^7.0.2",
     "react-markdown": "^2.5.0",
+    "react-svg": "^2.1.21",
     "sass-loader": "^4.1.1",
     "speakingurl": "^14.0.0",
     "webpack": "^3.4.1"

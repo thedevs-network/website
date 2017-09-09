@@ -8,6 +8,10 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
 const styles = theme => ({
+  logoLink: { 
+    display: 'flex',
+    alignItems: 'center' 
+  },
   root: {
     position: 'fixed',
     width: '100%',
@@ -53,7 +57,7 @@ class TopBar extends Component {
       else
         bar.classList.remove('active')
       lastScroll = currentScroll;
-    });    
+    });
   }
 
   render() {
@@ -63,10 +67,12 @@ class TopBar extends Component {
           <Toolbar className="row center-xs">
             <div className={this.props.classes.container + " row start-xs between-md middle-xs"}>
               <div className="row middle-xs">
-                <Avatar src='/static/img/thedevs.png' alt="the devs logo" className={this.props.classes.logo} />
-                <Typography type="title" color="inherit" style={{ float: "left" }}>
-                  The Devs
+                <a className={this.props.classes.logoLink} href="/">
+                  <Avatar src='/static/img/thedevs.png' alt="the devs logo" className={this.props.classes.logo} />
+                  <Typography type="title" color="inherit" style={{ float: "left" }}>
+                    The Devs
                 </Typography>
+                </a>
               </div>
               <div>
                 <Button href="/blog/" color="contrast" style={{ marginRight: "1em" }}>

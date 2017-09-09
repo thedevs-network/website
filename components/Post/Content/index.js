@@ -6,12 +6,13 @@ import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Chip from 'material-ui/Chip';
 import ReactMarkdown from 'react-markdown';
+import Share from '../Share';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     marginTop: -theme.spacing.unit * 40,
-    marginBottom: '6em'
+    paddingBottom: "2.5em"
   },
   container: {
     width: 1120,
@@ -80,7 +81,8 @@ const Content = ({ classes, post }) => (
           </Typography>
           <div className={classes.body + " row start-xs post-body"}>
             <ReactMarkdown source={post.body} />
-            <a href="/" style={{ fontStyle: "italic", fontSize: "2em", textAlign: "center", margin: "2em auto 1em" }}>
+            <Share title={getSlug(post.attributes.title)} />
+            <a href="/" style={{ fontStyle: "italic", fontSize: "2em", textAlign: "center", margin: "1.8em auto 1em" }}>
               Join Developers Community on Telegram!
             </a>
           </div>
