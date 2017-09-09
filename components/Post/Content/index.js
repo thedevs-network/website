@@ -82,7 +82,7 @@ const Content = ({ classes, post }) => (
           <div className={classes.body + " row start-xs post-body"}>
             <ReactMarkdown source={post.body} />
             <Share title={getSlug(post.attributes.title)} />
-            <a href="/" style={{ fontStyle: "italic", fontSize: "2em", textAlign: "center", margin: "2em auto 1em" }}>
+            <a href="/" style={{ fontStyle: "italic", fontSize: "2em", textAlign: "center", margin: "1.8em auto 1em" }}>
               Join Developers Community on Telegram!
             </a>
           </div>
