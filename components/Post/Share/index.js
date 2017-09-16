@@ -22,6 +22,7 @@ const styles = theme => ({
     padding: '1em 2em',
     alignItems: 'center',
     background: '#eee',
+    flexWrap: 'wrap',
   },
   text: {
     width: 'auto !important',
