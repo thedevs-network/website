@@ -23,6 +23,11 @@ const styles = theme => ({
     width: '18em',
     marginBottom: '1em',
     color: theme.palette.shades.dark.input.inputText,
+    '&:hover': {
+      '&:before': {
+        backgroundColor: theme.palette.shades.dark.input.disabled + ' !important',
+      },
+    },
     '&:before': {
       backgroundColor: theme.palette.shades.dark.input.disabled,
     },
@@ -34,7 +39,7 @@ const styles = theme => ({
     marginLeft: '2em',
     '@media screen and (max-width: 768px)': {
       marginLeft: 0,
-    }
+    },
   },
   error: {
     backgroundColor: red[500],
@@ -44,6 +49,7 @@ const styles = theme => ({
   },
   success: {
     backgroundColor: green[500],
+    cursor: 'default',
     '&:hover': {
       backgroundColor: green[700],
     },
@@ -81,32 +87,47 @@ class Subscription extends Component {
     const { button } = this.state;
     const { classes } = this.props;
     const buttonClass = button === 'subscribe' ? '' : button;
+    const subscription = button === 'success' ?
+      (
+        <Button
+          color="accent"
+          className={classes[buttonClass]}
+          raised
+        >
+          Subscribed successfully!
+        </Button>
+      ) :
+      (
+        <div className="col-xs-12 col-md">
+          <TextField
+            id="subsription-email"
+            name="email"
+            type="email"
+            label="Your Email Address"
+            labelClassName={classes.labelClassName}
+            InputClassName={classes.InputClassName}
+            onKeyPress={this.handleSubscribe}
+          />
+          <Button
+            color="accent"
+            className={classes.submit + ' ' + classes[buttonClass.replace('.', '')]}
+            onClick={this.handleSubscribe}
+            raised 
+          >
+            {button}
+          </Button>
+        </div>
+      )
+
     return (
       <div className={classes.root + " row center-xs"}>
         <div className={classes.container + " row middle-xs center-md start-xs"}>
           <div className="col-xs-12 col-md">
             <Typography type="title" color="inherit" align="left">
-              Be the first to recieve our new <strong>groups</strong> and <strong>articles</strong>.
+              Be the first to receive our new <strong>groups</strong> and <strong>articles</strong>.
             </Typography>
           </div>
-          <div className="col-xs-12 col-md">
-            <TextField
-              id="subsription-email"
-              name="email"
-              type="email"
-              label="Your Email Address"
-              labelClassName={classes.labelClassName}
-              InputClassName={classes.InputClassName}
-              onKeyPress={this.handleSubscribe}
-            />
-            <Button 
-              color="accent" 
-              raised className={classes.submit + ' ' + classes[buttonClass.replace('.', '')]} 
-              onClick={this.handleSubscribe}
-            >
-              {button}
-            </Button>
-          </div>
+          {subscription}
         </div>
       </div>
     );

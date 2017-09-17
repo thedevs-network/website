@@ -47,7 +47,6 @@ const subscribe = (email) => {
 	const list = process.env.MAILCHIMP_LIST;
 	const token = process.env.MAILCHIMP_TOKEN;
 	return new Promise((resolve, reject) => {
-		console.log(email);
 		if (!email) {
 			reject('No email address has provided');
 		}
