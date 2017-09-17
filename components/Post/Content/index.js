@@ -7,6 +7,7 @@ import Typography from 'material-ui/Typography';
 import Chip from 'material-ui/Chip';
 import ReactMarkdown from 'react-markdown';
 import Share from '../Share';
+import Subscription from '../../Subscription';
 
 const styles = theme => ({
   root: {
@@ -89,6 +90,7 @@ const Content = ({ classes, post }) => (
         </article>
       </div>
     </div>
+    <Subscription />
   </div>
 );
 
