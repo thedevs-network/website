@@ -10,6 +10,7 @@ const styles = theme => ({
   shareComp: {
     display: 'flex',
     width: '100%',
+    margin: '.5em 0 0',
     flexDirection: 'column',
     alignContent: 'center',
     '& a': {
@@ -23,6 +24,7 @@ const styles = theme => ({
     padding: '1em 2em',
     alignItems: 'center',
     background: '#eee',
+    flexWrap: 'wrap',
   },
   text: {
     width: 'auto !important',

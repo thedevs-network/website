@@ -4,6 +4,7 @@ import withRoot from '../components/withRoot';
 import Header from '../components/Header';
 import Community from '../components/Community';
 import Footer from '../components/Footer';
+import Subscription from '../components/Subscription';
 
 class Index extends Component {
 	render() {
@@ -21,6 +22,7 @@ class Index extends Component {
 				</Head>
 				<Header />
 				<Community groups={this.props.url.query} />
+				<Subscription />
 				<Footer />
 			</div>
 		);
