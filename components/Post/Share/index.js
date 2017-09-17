@@ -10,6 +10,7 @@ const styles = theme => ({
   shareComp: {
     display: 'flex',
     width: '100%',
+    margin: '.5em 0 0',
     flexDirection: 'column',
     alignContent: 'center',
     '& a': {
