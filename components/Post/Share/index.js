@@ -18,6 +18,7 @@ const styles = theme => ({
   },
   shareIcons: {
     flexGrow: '1 1 100%',
+    marginTop: '2em',
     display: 'flex',
     padding: '1em 2em',
     alignItems: 'center',
