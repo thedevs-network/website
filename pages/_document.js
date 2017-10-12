@@ -2,6 +2,9 @@ import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { getContext, setContext } from '../styles/context';
 import stylesheet from '../static/css/main.scss';
+import minifyCSSString from 'minify-css-string';
+
+const customStyles = minifyCSSString(stylesheet);
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx) {
@@ -31,7 +34,7 @@ export default class MyDocument extends Document {
 					<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' />
 				</Head>
 				<body>
-					<style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+					<style dangerouslySetInnerHTML={{ __html: customStyles }} />
 					<Main />
 					<NextScript />
 					<script src="/static/js/prism.js"></script>
