@@ -99,10 +99,14 @@ app.prepare()
 		});
 
 		server.post('/subscription', (req, res) => {
-			console.log(req);
 			subscribe(req.body.email)
 				.then(response => res.status(200).send('subsribed!'))
 				.catch(err => res.status(400).send({message: err}));
+		});
+
+		server.get('/mailto/:mail', (req, res) => {
+			const { mail } = req.params;
+			res.redirect(`mailto:${mail}`);
 		});
 
 		server.get('*', (req, res) => {
