@@ -18,7 +18,7 @@ All of the code examples in this article will be in [JavaScript](https://en.wiki
 
 Why would you want to write functional code? You should know the answer to this question before attempting to program in a functional style.
 
-The best reason I can think of is that any program written in a functional style becomes much easier to debug and to change. The reason for this sudden ease of change is something called Pure Functions. We'll come back to this [later](#pure-functions).
+The best reason I can think of is that any program written in a functional style becomes much easier to debug and to change. The reason for this sudden ease of change is something called Pure Functions. We'll come back to this later on this post.
 
 Another major selling point for functional code is modularity. ANY function defined in your code (As long as you write only pure functions) is completely detachable and reusable throughout your project, or even in other projects (You can turn it into a module!). With imperative programming it's rarely easy or even possible to pull arbitrary functions out of the codebase and reuse them elsewhere.
 
