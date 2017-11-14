@@ -43,7 +43,7 @@ const Group = (props) => {
     <div className={classes.root + " col-lg-4 col-md-6 col-sm-6 col-xs-12"}>
       <Paper className={classes.paper + " row col-xs-12 middle-xs between-xs"} elevation={2}>
         <div className="row col-xs middle-xs" style={{ padding: 0 }}>
-          <Avatar src={`/static/img/${name}.png`} className={classes.photo} />
+          <Avatar src={`/static/img/${name}.png`} className={classes.photo} alt={name} />
           <div style={{ float: 'left' }}>
             <Typography type="title" className={classes.typography}>
               {displayName}
@@ -53,7 +53,7 @@ const Group = (props) => {
             </Typography>
           </div>
         </div>
-        <Button color="accent" raised dense style={{ float: 'right' }} href={"https://t.me/joinchat/" + link} target="_bank">
+        <Button color="accent" raised dense style={{ float: 'right' }} href={"https://t.me/joinchat/" + link} target="_blank">
           <img src="/static/img/telegram.svg" alt="Telegram" className={classes.svg} /> Join
         </Button>
       </Paper>

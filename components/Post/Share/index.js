@@ -32,6 +32,7 @@ const styles = theme => ({
   },
   button: {
     transition: 'all .3s ease',
+    margin: '1.1em',
     '&:hover': {
       '& svg': {
         fill: '#7B1FA2',
@@ -54,48 +55,48 @@ const Share = ({ classes, title }) => {
         <Typography type="body1" className={classes.text}>
           Share socially:
         </Typography>
-        <IconButton
+        <a
           href={`https://t.me/share/url?url=https://thedevs.network/blog/${title}`} 
           target="_blank" 
           className={classes.button}
         >
           <ReactSVG path="/static/img/share/telegram.svg" className={classes.svg} />
-        </IconButton>
-        <IconButton 
+        </a>
+        <a 
           href={`https://twitter.com/home?status=https://thedevs.network/blog/${title}`} 
           target="_blank" 
           className={classes.button}
         >
           <ReactSVG path="/static/img/share/twitter.svg" className={classes.svg} />
-        </IconButton>
-        <IconButton 
+        </a>
+        <a 
           href={`https://www.facebook.com/sharer/sharer.php?u=https://thedevs.network/blog/${title}`} 
           target="_blank" 
           className={classes.button}
         >
           <ReactSVG path="/static/img/share/facebook.svg" className={classes.svg} />
-        </IconButton>
-        <IconButton 
+        </a>
+        <a 
           href={`https://plus.google.com/share?url=https://thedevs.network/blog/${title}`} 
           target="_blank" 
           className={classes.button}
         >
           <ReactSVG path="/static/img/share/googleplus.svg" className={classes.svg} />
-        </IconButton>
-        <IconButton 
+        </a>
+        <a 
           href={`http://vk.com/share.php?url=https://thedevs.network/blog/${title}`} 
           target="_blank" 
           className={classes.button}
         >
           <ReactSVG path="/static/img/share/vk.svg" className={classes.svg} />
-        </IconButton>
-        <IconButton 
+        </a>
+        <a 
           href={`https://www.linkedin.com/shareArticle?mini=true&url=https://thedevs.network/blog/${title}`} 
           target="_blank" 
           className={classes.button}
         >
           <ReactSVG path="/static/img/share/linkedin.svg" className={classes.svg} />
-        </IconButton>
+        </a>
       </div>
     </div>
   );

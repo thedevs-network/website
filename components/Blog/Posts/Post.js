@@ -52,7 +52,7 @@ const Post = ({ classes, post }) => (
               {` by ${post.attributes.author}`}
             </Typography>
           </div>
-          <Button color="accent" >
+          <Button color="accent" component="a">
             Read More
           </Button>
         </CardActions>
