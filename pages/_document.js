@@ -22,8 +22,6 @@ export default class MyDocument extends Document {
 		return (
 			<html lang='en'>
 				<Head>
-					<title>The Devs, Developers Community on Telegram</title>
-					<meta charSet='utf-8' />
 					<meta name='viewport' content={
 						'user-scalable=0, initial-scale=1, maximum-scale=1, ' +
 						'minimum-scale=1, width=device-width, height=device-height'}
@@ -32,9 +30,9 @@ export default class MyDocument extends Document {
 					<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png" />
 					<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png" />
 					<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' />
+					<style dangerouslySetInnerHTML={{ __html: customStyles }} />
 				</Head>
 				<body>
-					<style dangerouslySetInnerHTML={{ __html: customStyles }} />
 					<Main />
 					<NextScript />
 					<script src="/static/js/prism.js"></script>
