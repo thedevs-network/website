@@ -8,12 +8,12 @@ const styles = theme => ({
     html: {
       background: theme.palette.background.default,
       WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale'
+      MozOsxFontSmoothing: 'grayscale',
     },
     body: {
-      margin: 0
-    }
-  }
+      margin: 0,
+    },
+  },
 });
 
 let AppWrapper = props => props.children;
@@ -41,8 +41,11 @@ function withRoot(BaseComponent) {
       const context = getContext();
 
       return (
-        <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
-          <MuiThemeProvider theme={context.theme} sheetsManager={context.sheetsManager}>
+        <JssProvider>
+          <MuiThemeProvider
+            theme={context.theme}
+            sheetsManager={context.sheetsManager}
+          >
             <AppWrapper>
               <BaseComponent {...this.props} />
             </AppWrapper>
