@@ -1,6 +1,7 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { getContext, setContext } from '../styles/context';
+import JssProvider from 'react-jss/lib/JssProvider';
+import getContext from '../styles/getContext';
 import stylesheet from '../static/css/main.scss';
 import minifyCSSString from 'minify-css-string';
 
@@ -8,14 +9,20 @@ const customStyles = minifyCSSString(stylesheet);
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    setContext();
-    const page = ctx.renderPage();
     const context = getContext();
+    const page = ctx.renderPage(Component => props => (
+      <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
+        <Component {...props} />
+      </JssProvider>
+    ));
+
     return {
       ...page,
+      stylesContext: context,
       styles: (
         <style
           id="jss-server-side"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: context.sheetsRegistry.toString(),
           }}
