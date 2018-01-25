@@ -22,7 +22,7 @@
     "material-ui-icons": "^1.0.0-beta.15",
     "minify-css-string": "^1.0.0",
     "moment": "^2.19.0",
-    "next": "^4.0.3",
+    "next": "^4.2.3",
     "node-sass": "^4.5.3",
     "raw-loader": "^0.5.1",
     "react": "^16.0.0",
