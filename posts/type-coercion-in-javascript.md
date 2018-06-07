@@ -2,7 +2,7 @@
 title: Type coercion in JavaScript (and why everyone gets it wrong)
 img: type-coercion-javascript
 date: 2018, 06, 07
-author: Muthu Kumar <@MKRhere> (https://mkr.pw)
+author: Muthu Kumar
 cats: javascript
 tags: javascript, types, coercion
 ---
