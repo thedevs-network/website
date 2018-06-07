@@ -15,7 +15,7 @@ This is my little attempt to explain JavaScript's type coercion in a very simple
 
 ## What is it doing wrong?
 
-> **Example 1**
+**Example 1**
 
 ```JavaScript
 const a = [ 1, 2, 3 ];
@@ -24,7 +24,7 @@ const b = [ 1, 2, 3 ];
 console.log(a + b); //-> 1,2,31,2,3 <- Why?
 ```
 
-> **Example 2**
+**Example 2**
 
 ```JavaScript
 const nope = Array(10).join("nope" - 1) + " Batman!";
@@ -32,7 +32,7 @@ const nope = Array(10).join("nope" - 1) + " Batman!";
 console.log(nope); //-> NaNNaNNaNNaNNaNNaNNaNNaNNaN Batman! <- Why?
 ```
 
-> **Example 3**
+**Example 3**
 
 ```JavaScript
 const x = [];
@@ -57,26 +57,108 @@ JavaScript simply hooks into appropriate methods found in that object or primiti
 
 Here's a cheatsheet on what coerces to what by default:
 
-| Origin                          | Target  | Result                                       |
-|---------------------------------|---------|----------------------------------------------|
-| Number                          | Boolean | True, except if it's `0`, or `NaN`           |
-| String                          | Boolean | True, except if it's an empty string `""`    |
-| undefined or null               | Boolean | Always `false`                               |
-| Object, Array, Symbol, Function | Boolean | Always `true`                                |
-|                                 |         |                                              |
-| Number, Undefined, Null, NaN    | String  | Value as string (`5` --> `"5"`)              |
-| Boolean, Function, Symbol       | String  | Value as string (`true` --> `"true"`)        |
-| Array                           | String  | String of array values separated by commas   |
-|                                 |         | Empty string if empty array                  |
-| Object                          | String  | `'[object Object]'` (yes, yes I know...)     |
-|                                 |         |                                              |
-| String                          | Number  | `NaN`, except if string represents a number  |
-|                                 |         | `"5"` --> `5`, `"0.001"` --> `0.001`         |
-| Array                           | Number  | `0` if empty array, number if the only       |
-|                                 |         | element is a number, `NaN` in any other case |
-| Object, Function, undefined     | Number  | `NaN`                                        |
-| null                            | Number  | `0`                                          |
-| Symbol                          | Number  | THROWS!                                      |
+<table class="pure-table">
+<thead>
+<tr>
+<th>Origin</th>
+<th>Target</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number</td>
+<td>Boolean</td>
+<td>True, except if it&#39;s <code>0</code>, or <code>NaN</code></td>
+</tr>
+<tr>
+<td>String</td>
+<td>Boolean</td>
+<td>True, except if it&#39;s an empty string <code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>undefined or null</td>
+<td>Boolean</td>
+<td>Always <code>false</code></td>
+</tr>
+<tr>
+<td>Object, Array, Symbol, Function</td>
+<td>Boolean</td>
+<td>Always <code>true</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Number, Undefined, Null, NaN</td>
+<td>String</td>
+<td>Value as string (<code>5</code> --&gt; <code>&quot;5&quot;</code>)</td>
+</tr>
+<tr>
+<td>Boolean, Function, Symbol</td>
+<td>String</td>
+<td>Value as string (<code>true</code> --&gt; <code>&quot;true&quot;</code>)</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>String</td>
+<td>String of array values separated by commas</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Empty string if empty array</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>String</td>
+<td><code>&#39;[object Object]&#39;</code> (yes, yes I know...)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>String</td>
+<td>Number</td>
+<td><code>NaN</code>, except if string represents a number</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>&quot;5&quot;</code> --&gt; <code>5</code>, <code>&quot;0.001&quot;</code> --&gt; <code>0.001</code></td>
+</tr>
+<tr>
+<td>Array</td>
+<td>Number</td>
+<td><code>0</code> if empty array, number if the only</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>element is a number, <code>NaN</code> in any other case</td>
+</tr>
+<tr>
+<td>Object, Function, undefined</td>
+<td>Number</td>
+<td><code>NaN</code></td>
+</tr>
+<tr>
+<td>null</td>
+<td>Number</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>Number</td>
+<td>THROWS!</td>
+</tr>
+</tbody>
+</table>
+
 
 > Side note: I won't go too deep into operators, but a common misunderstanding among amateurs is that the "+" operator behaves unexpectedly. In fact, it does not. It's simply that the same operator acts as one of "summation" (when dealing with numbers), "concatenation" (when dealing with strings), or the "unary plus" operators depending on context. Anything else you attempt to pass to it will result in coercion to either a string or number. We'll come back to this.
 

@@ -4,6 +4,7 @@ import JssProvider from 'react-jss/lib/JssProvider';
 import getContext from '../styles/getContext';
 import stylesheet from '../static/css/main.scss';
 import minifyCSSString from 'minify-css-string';
+import config from '../config.json'
 
 const customStyles = minifyCSSString(stylesheet);
 
@@ -43,6 +44,10 @@ export default class MyDocument extends Document {
               'minimum-scale=1, width=device-width, height=device-height'
             }
           />
+          <meta
+            name="google-site-verification"
+            content={config.googleVerificationContent}
+          />
           <meta name="theme-color" content="#512DA8" />
           <link
             rel="icon"
@@ -65,6 +70,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script src="/static/js/analytics.js" />
           <script src="/static/js/prism.js" />
         </body>
       </html>

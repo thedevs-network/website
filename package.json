@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
     "autoprefixer": "^6.7.7",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "ajv": "^5.2.3",
+    "cross-env": "^5.1.6",
     "eslint-plugin-react": "^7.4.0"
   },
   "keywords": [
