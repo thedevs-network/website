@@ -1,6 +1,7 @@
 @import 'flexboxgrid.min';
 @import 'normalize';
 @import 'prism';
+@import 'tables';
 
 body {
   font: 16px/1.618 'Roboto', sans-serif;
@@ -94,7 +95,7 @@ a {
 }
 
 .post-body blockquote {
-  margin: 0;
+  margin: 0 0 2em;
   padding: 1em 2em;
   border-left: 12px solid #b39ddb;
   font-style: italic;
@@ -106,6 +107,10 @@ a {
 
 .post-body blockquote p:after {
   content: ' "';
+}
+
+.post-body table {
+  margin-bottom: 2em;
 }
 
 @media only screen and (max-width: 48em) {

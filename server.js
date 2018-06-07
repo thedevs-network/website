@@ -81,6 +81,7 @@ app.prepare()
 		server.use(bodyParser.json());
 
 		server.use('/static', express.static('static'));
+		server.use('/.well-known', express.static('.well-known'));
 
 		server.get('/', (req, res) => {
 			return app.render(req, res, '/', state.groups);

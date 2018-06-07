@@ -20,6 +20,7 @@ module.exports = (token) => {
       }
     })
     Promise.all(groupWithCounts)
-      .then(result => resolve(result));
+      .then(result => resolve(result))
+      .catch(() => resolve(groups));
   });
 }
