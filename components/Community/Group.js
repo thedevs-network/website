@@ -28,7 +28,9 @@ const styles = theme => ({
     boxShadow: theme.shadows[4]
   },
   typography: {
-    marginBottom: '.3em'
+    marginBottom: '.3em',
+    word-wrap: 'break-word',
+    width: '140px',
   },
   svg: {
     width: 10,
