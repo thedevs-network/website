@@ -29,7 +29,7 @@ const styles = theme => ({
   },
   typography: {
     marginBottom: '.3em',
-    word-wrap: 'break-word',
+    wordWrap: 'break-word',
     width: '140px',
   },
   svg: {
