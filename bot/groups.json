@@ -28,11 +28,11 @@
     "count": 2261
   },
   {
-    "displayName": "DevOps",
-    "name": "devops",
-    "id": "-1001123255745",
-    "link": "BkBvqULzhcG1AhRE7ljMyg",
-    "count": 1113
+    "displayName": "Go",
+    "name": "go",
+    "id": "-1001142118787",
+    "link": "BkBvqUQTWYNc170pxYOQJQ",
+    "count": 608
   },
   {
     "displayName": "Android",
@@ -42,11 +42,11 @@
     "count": 3213
   },
   {
-    "displayName": "Go",
-    "name": "go",
-    "id": "-1001142118787",
-    "link": "BkBvqUQTWYNc170pxYOQJQ",
-    "count": 608
+    "displayName": "DevOps",
+    "name": "devops",
+    "id": "-1001123255745",
+    "link": "BkBvqULzhcG1AhRE7ljMyg",
+    "count": 1113
   },
   {
     "displayName": "Java",
@@ -84,11 +84,32 @@
     "count": 309
   },
   {
+    "displayName": "Functional Programming",
+    "name": "fp",
+    "id": "-1001202895261",
+    "link": "BkBvqUeyuZ3eVxKK3JHOMQ",
+    "count": 100
+  },
+  {
     "displayName": "Data Science",
     "name": "datascience",
     "id": "-1001246039872",
     "link": "BkBvqUpFD0AbUY7Uku-j9w",
     "count": 369
+  },
+  {
+    "displayName": "Game Development",
+    "name": "game",
+    "id": "-1001156674155",
+    "link": "BkBvqUTxcmvTpm7bSZyx9g",
+    "count": 100
+  },
+  {
+    "displayName": "Machine Learning",
+    "name": "ml",
+    "id": "-1001198947145",
+    "link": "BkBvqUd2e0lSFNj8yQT3eA",
+    "count": 100
   },
   {
     "displayName": "IoT",
