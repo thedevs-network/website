@@ -48,6 +48,21 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content={config.googleVerificationContent}
           />
+          <meta name="description" content="The Devs Network, developers community with +20 programming groups on Telegram" />
+          <meta name="image" content="https://thedevs.network/static/img/thedevs.png" />
+          <meta itemprop="name" content="https://thedevs.network/" />
+          <meta itemprop="description" content="The Devs Network, developers community with +20 programming groups on Telegram" />
+          <meta itemprop="image" content="https://thedevs.network/static/img/thedevs.png" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content="https://thedevs.network/" />
+          <meta name="twitter:description" content="The Devs Network, developers community with +20 programming groups on Telegram" />
+          <meta name="twitter:image:src" content="https://thedevs.network/static/img/twitter-card.png" />
+          <meta name="og:title" content="https://thedevs.network/" />
+          <meta name="og:description" content="The Devs Network, developers community with +20 programming groups on Telegram" />
+          <meta name="og:image" content="https://thedevs.network/static/img/og-card.png" />
+          <meta name="og:url" content="https://thedevs.network" />
+          <meta name="og:site_name" content="The Devs" />
+          <meta name="og:type" content="website" />
           <meta name="theme-color" content="#512DA8" />
           <link
             rel="icon"
